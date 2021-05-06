@@ -1,0 +1,44 @@
+.titlescreen {
+  height: 100vh;
+  width: 100vw;
+  font-size: 2.5rem;
+  position: relative;
+
+  .titlescreen-text {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .subtext {
+    font-size: 0.4em;
+  }
+
+  .links {
+    font-size: 0.8em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .links a {
+    margin: 4px 12px;
+    font-size: 0.8em;
+  }
+
+  .blog {
+    font-size: 0.8em;
+  }
+
+  a {
+    text-decoration: none;
+    transition: color 200ms ease;
+  }
+
+  a:hover {
+    color: var(--color-secondary);
+  }
+}

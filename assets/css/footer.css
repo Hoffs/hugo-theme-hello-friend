@@ -48,4 +48,13 @@
       margin-top: 10px;
     }
   }
+
+  .footer__links {
+    display: flex;
+    flex-direction: row;
+
+    & > *:not(:last-of-type) {
+      margin-right: 8px;
+    }
+  }
 }

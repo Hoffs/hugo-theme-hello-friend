@@ -4,21 +4,17 @@
       <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
       {{ else }}
       {{ partial "logo.html" . }}
-      <div class="copyright">
-        <span
-          >© {{ now.Year }} Powered by
-          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span
-        >
-        <span
-          >Theme created by
-          <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span
-        >
-      </div>
     {{ end }}
+    <div class="footer__links">
+      <a href="https://github.com/hoffs"><i class="fab fa-github"></i></a>
+      <a href="mailto:ignas@maslinskas.lt"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/ignasmaslinskas/"><i class="fab fa-linkedin"></i></a>
+    </div>
   </div>
 </footer>
 
 <script src="{{ "assets/main.js" | absURL }}"></script>
 <script src="{{ "assets/prism.js" | absURL }}"></script>
+<script src="https://kit.fontawesome.com/af2a784b78.js" crossorigin="anonymous"></script>
 
 {{- partial "extended_footer.html" . }}

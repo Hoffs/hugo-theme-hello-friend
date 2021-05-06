@@ -1,0 +1,36 @@
+{{ define "main" }}
+  {{ $pages := sort (where .Site.RegularPages "Type" "links") "Params.category" "asc" }}
+
+
+  {{ $lastcategory := "" }}
+  <div class="resources">
+      <h2>Collection of useful or interesting resources</h2>
+    {{ range $pages }}
+      {{ $category := cond ( isset .Params "category" ) .Params.category "Uncategorized" }}
+
+      {{ if ne $category $lastcategory }}
+        {{ if ne $lastcategory "" }}
+        </div>
+        {{end}}
+        <div class="resource-category">
+  <div class="resource-category__title">{{- $category -}}</div>
+      {{- end -}}
+
+      {{- $lastcategory = $category -}}
+      <div class="resource">
+        <div class="resource__title">
+          <a href="{{ .Params.link | safeURL }}">{{ .Title }}</a>
+        </div>
+        <div class="resource__description">
+          {{- .Params.description -}}
+        </div>
+      </div>
+
+    {{ end }}
+
+    {{ if ne $lastcategory "" }}
+    </div>
+    {{end}}
+
+  </div>
+{{ end }}

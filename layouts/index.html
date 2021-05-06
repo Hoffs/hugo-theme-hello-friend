@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.Language }}">
+  <head>
+    <title>Ignas Maslinskas / hoffs</title>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="{{ if ne $.Site.Params.defaultTheme "light" -}} dark-theme {{- end -}}">
+    <div class="titlescreen">
+      <div class="titlescreen-text">
+        <div class="name">Ignas Maslinskas</div>
+        <div class="subtext">Software Engineer @ (?)</div>
+        <div class="links">
+          <a href="https://github.com/hoffs"><i class="fab fa-github"></i> GitHub</a>
+          <a href="mailto:ignas@maslinskas.lt"><i class="fas fa-envelope"></i> Email</a>
+          <a href="https://www.linkedin.com/in/ignasmaslinskas/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <div class="blog">
+          <a href="/blog">Blog / Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://kit.fontawesome.com/af2a784b78.js" crossorigin="anonymous"></script>
+</html>
