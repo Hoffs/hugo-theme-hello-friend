@@ -16,8 +16,9 @@ module.exports = () => ({
     postCSSPresetEnv({
       stage: 1,
     }),
-    production && cssnano({
-      preset: "default",
-    }),
+    // this loses some rules (https://github.com/cssnano/cssnano/issues/1004)
+    // production && cssnano({
+    //   preset: "default",
+    // }),
   ],
 });

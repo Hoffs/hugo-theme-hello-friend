@@ -14,7 +14,6 @@
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "husky": "^4.2.5",
     "postcss": "^8.2.14",
     "postcss-import": "^14.0.1",
     "postcss-mixins": "^7.0.3",
@@ -27,10 +26,5 @@
     "rollup": "^2.47.0",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run build && git add . && git commit --amend --no-edit"
-    }
   }
 }
