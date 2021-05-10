@@ -2,9 +2,10 @@ const url = require("postcss-url");
 const imports = require("postcss-import");
 const nested = require("postcss-nested");
 const postCSSPresetEnv = require("postcss-preset-env");
-const browsers = require("browserslist");
 const cssnano = require("cssnano");
 const mixins = require("postcss-mixins");
+
+const production = !process.env.ROLLUP_WATCH;
 
 module.exports = () => ({
   plugins: [
@@ -15,7 +16,7 @@ module.exports = () => ({
     postCSSPresetEnv({
       stage: 1,
     }),
-    cssnano({
+    production && cssnano({
       preset: "default",
     }),
   ],
