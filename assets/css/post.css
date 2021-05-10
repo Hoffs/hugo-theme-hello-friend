@@ -1,3 +1,7 @@
+.index-content {
+  margin-bottom: 1em;
+}
+
 .posts {
   &__empty {
     display: flex;
@@ -9,8 +13,6 @@
 
 .post {
   text-align: left;
-  padding: 1em;
-  margin: 1em auto;
   display: flex;
   flex-direction: column;
 

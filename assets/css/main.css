@@ -131,7 +131,7 @@ pre {
 
 blockquote {
   border-left: 2px solid;
-  margin: 40px;
+  margin: 1.5em;
   padding: 10px 20px;
 
   @media (--phone) {
@@ -209,7 +209,7 @@ select {
 .content {
   flex-grow: 1;
   display: grid;
-  grid-template-columns: 1fr min(60ch, calc(100% - 64px)) 1fr;
+  grid-template-columns: 1fr min(65ch, calc(100% - 64px)) 1fr;
   grid-column-gap: 32px;
   margin: 1.5rem 0;
 }
@@ -238,7 +238,6 @@ hr {
   padding: 20px;
   border-radius: 10px;
   border: 1px solid var(--border-color);
-  max-width: 800px;
 }
 
 blockquote.twitter-tweet {
