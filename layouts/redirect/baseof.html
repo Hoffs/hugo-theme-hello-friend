@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{{ $to := cond ( isset .Params "to" ) .Params.to "/blog/" }}
+<html>
+    <head>
+        <title>Redirect</title>
+        <link rel="canonical" href="{{ $to }}"/>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="refresh" content="0; url={{ $to }}" />
+    </head>
+</html>
